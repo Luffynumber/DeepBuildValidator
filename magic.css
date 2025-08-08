@@ -1,3 +1,60 @@
-.SocialMedia{
+*{
+    background-color: #ff02e6;
+}
+#header1{
+    border-radius: 10px;
+    color: var(--text-color, orange);/*text color*/
     
 }
+.category-buttons{
+    display:flex;
+    justify-content:center;
+    border-color: rgb(255, 255, 255);
+    padding: auto;
+    gap: 35px;
+}
+.social-icons{
+    display: flex;
+    margin-top: 50%;
+    gap: 5px;
+    border-radius: 10px;
+}
+/*This is for category buttons reforming*/
+:root{
+    --font-
+}
+#stats{
+    border-radius: 10px;
+    border-width: 3px;
+}
+#talents{
+    border-radius:10px;
+    border-width: 3px;
+}
+#weapons{
+    border-radius:10px;
+    border-width: 3px;
+}
+#Equipment{
+    border-radius: 10px;
+    border-width: 3px;
+}
+#Mantras{
+    border-radius: 10px;
+    border-width: 3px;
+}
+/*This is getting rid of borders*/
+
+#github{
+    display:flex;
+    border-radius: 100px;
+    flex-shrink: 100;
+    border: none;
+}
+#instagram{
+    border: none;
+}
+#youtube{
+    border:none;
+}
+/*Border removal section ⬆️*/
