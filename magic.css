@@ -1,18 +1,62 @@
 *{
-    background-color: #ff02e6;
+    margin:0;
+    padding: 0;
+    background-color: #ffffff;
 }
-#header1{
+#hear1{
     border-radius: 10px;
-    color: var(--text-color, orange);/*text color*/
+    color: var(--text-color, #136d33);/*text color*/
+    display:flex;
+    border: solid 2px black;
+    margin-left: 30%;
+    align-items:center;
+    justify-content:flex-start;
+    vertical-align:center;
+    padding: 0px;
+    text-align:center;
+    height: 200px;
+    width: 50%;
+
+    font-size: x-large;
+}
+.title{
+    display:flex;
+    border: solid 2px black;
+    border-style: hidden;
+    justify-content:flex-end;
+    flex-direction: column;
+    vertical-align: center;
+    padding: 10px;
+    width: 180px;
+    height: 100px;
+    align-items:center;
+    margin-left: 30%;
+    margin-bottom: -18%;
+}
+/*DeepBuildValidator Logo*/
+#DeepIcon{
+    display:flex;
+    justify-content: flex-start;
+    border: solid 2px red;
+    width: 200px;
+    clip-path: circle(30%);
+    vertical-align:flex-start;
+    margin: 0px;
+    flex-shrink: 0;
     
+    /*clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); This makes a polygram type shape */
+    /*border-radius: 250px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;*/
+
 }
 .category-buttons{
     display:flex;
     justify-content:center;
-    border-color: rgb(255, 255, 255);
     padding: auto;
     gap: 35px;
 }
+
 .social-icons{
     display: flex;
     margin-top: 50%;
@@ -21,27 +65,33 @@
 }
 /*This is for category buttons reforming*/
 :root{
-    --font-
+    --border-clr: #0e9000;
 }
+
 #stats{
     border-radius: 10px;
     border-width: 3px;
+    border-color:var(--border-clr);
 }
 #talents{
     border-radius:10px;
     border-width: 3px;
+    border-color:var(--border-clr);
 }
 #weapons{
     border-radius:10px;
     border-width: 3px;
+    border-color:var(--border-clr);
 }
 #Equipment{
     border-radius: 10px;
     border-width: 3px;
+    border-color:var(--border-clr);
 }
 #Mantras{
     border-radius: 10px;
     border-width: 3px;
+    border-color:var(--border-clr);
 }
 /*This is getting rid of borders*/
 
