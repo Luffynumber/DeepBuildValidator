@@ -11,74 +11,88 @@
         <script defer src="interactive.js"></script>
     </head>
     <body>
+      <div class="wholecontainer">
         <div class="title">
-            <h1 id="header1">DeepBuildValidator!</h1>
-        </div>
+            <h1>DeepBuildValidator!</h1>
             <img id="DeepIcon" src="images/DeepBuildValidator.png" alt="DeepBuildValidator-Icon">
-            <hr>
-        <br><br>
-        <h2>Is your Deepwoken Build Still Valid?</h2>
+        </div>
+        <hr id="divider1">
+    
+            <br>
+        <h2 id="header2">Is your Deepwoken Build Still Valid?</h2>
+        <hr id=divider1>
         <br>
-        <p>Insert your stats <br>  And it'll do the rest for you!</p>
+        <p id="words">Insert your stats <br>  And it'll do the rest for you!</p>
         <!--<hr> adds a nice looking line in html for me-->
-        <hr>
+        <hr id="divider2">
 
         <!--Home button navigtion -->
         <div class="home-button">
-            <button onclick="Home(home)">
+            <button onclick="Home('home')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 448 512"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
             </button>
         </div>
         <!--The main components of the build validator-->
         <div class="category-buttons">
-            <button onclick="showCategory(stats)" id="stats">
+            <button onclick="showCategory('stats')" id="stats">
                 Stats
                 <img src="images/level up or stats.svg" alt="Stats" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             </button>
-            <button onclick="showCategory(Talents)" id="talents">
+            <button onclick="showCategory('Talents')" id="talents">
                 Talents
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-up2-icon lucide-book-up-2"><path d="M12 13V7"/><path d="M18 2h1a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2"/><path d="m9 10 3-3 3 3"/><path d="m9 5 3-3 3 3"/></svg>
             </button>
-            <button onclick="showCategory(Weapons)" id="weapons">
+            <button onclick="showCategory('Weapons')" id="weapons">
                 Weapons
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sword-icon lucide-sword"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/></svg>
             </button>
-            <button onclick="showCategory(Equipment)"id="Equipment">
+            <button onclick="showCategory('Equipment')"id="Equipment">
                 Gear
                 <img src="images/helmet.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             </button>
-            <button onclick="showCategory(Mantras)"id="Mantras">
+            <button onclick="showCategory('Mantras')"id="Mantras">
                 Mantras
                 <img src="images/icons8-stars.svg" width="20" height="20">
             </button>
         </div>
         
         <!--Category Content Sections-->
-        <div id="stats-content" class="category-content">
+        <div id="stats-content" class="stats-category-content">
             <form><!--ill add the method="get" and action later during the backend-->
                 <label for="str-stat">Strength</label>
-                <input type="number" id="str-input" name="strong">
+                <input type="number" min="0" max="100" id="str-input" name="strong">
                 <br>
                 <label for="agil-stat">Agility</label>
-                <input type="number" id="agi-input" name="agile">
+                <input type="number" min="0" max="100" id="agi-input" name="agile">
                 <br>
                 <label for="intel">Intelligence</label>
-                <input type="number" id="intel-input" name="brain">
+                <input type="number" min="0" max="100" id="intel-input" name="brain">
                 <br>
                 <label for="Will">Willpower</label>
-                <input type="number" id="will-input" name="mental">
+                <input type="number" min="0" max="100" id="will-input" name="mental">
                 <br>
                 <label for="fort">Fortitude</label>
-                <input type="number" id="fort-input" name="endurance">
+                <input type="number" min="0" max="100" id="fort-input" name="endurance">
                 <br>
                 <label for="charm">Charisma</label>
-                <input type="number" id="charm-input" name="rizz">
+                <input type="number" min="0" max="100" id="charm-input" name="rizz">
+            </form>    
                 <!--This is for none stats-->
+        </div>
+        <div id="stats-content2" class="stats-category-content">
+            <form>
                 <br>
                 <label for="song">Songchant</label>
-                <input type="number" id="song-input" name="songchant">
+                <input type="number" min="0" max="6" id="song-input" name="songchant">
                 <br>
                 <label for="prof">Proficiency</label>
+                <input type="number" min="0" max="6" id="prof-input" name="proficient">
+                <br>
+                <label for="Vital">Vitality</label>
+                <input type="number" min="0" max="6" id="vital-input" name="health">
+                <br>
+                <label for="erud">Erudition</label>
+                <input type="number" min="0" max="6" id="erud-input" name="Vent">
             </form>
             <!--stats content goes here-->
         </div>
@@ -89,6 +103,7 @@
 
         <div id="Weapons-content" class="category-content">
             <!--weapons content goes here-->
+
         </div>
 
         <div id="Equipment-content" class="category-content">
@@ -97,6 +112,7 @@
 
         <div id="Mantras-content" class="category-content">
             <!--Mantras content goes here-->
+
         </div>
         
         <div class="social-icons">
@@ -113,11 +129,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 500" width="40" height="40"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"/></svg>
             </button>
         </div>
-        <div class="wrapper">
-            <dir class="nav">
-
-            </dir>
-        </div>
-        
+        <div class="wrapper"></div>
+      </div>
     </body>
 </html>
