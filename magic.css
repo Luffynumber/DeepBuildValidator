@@ -5,7 +5,7 @@ body{
     border: solid 5px rgb(39, 106, 38);
     border-radius: 60px;
     min-width:min-content;
-    flex-shrink: 0;
+    flex-shrink: 1;
     margin:auto; /*mmight have to change this back soon to 200px*/
     /*background: linear-gradient(to right, rgb(19, 51, 19), rgb(24, 255, 62));*/
     padding: 20px 0px;
@@ -103,15 +103,19 @@ body{
 }
 .category-buttons{
     display:flex;
-    justify-content:center;
     flex-wrap: nowrap;
+    flex-shrink: 1;
+
     padding: auto;
-    gap: 9px;
+    gap: 8px;
+
 }
+
 
 .social-icons{
     display: flex;
-    margin-top: 50%;
+    margin-top: 90%;
+    margin-right: 20%;
     gap: 5px;
     border-radius: 10px;
 }
@@ -119,36 +123,137 @@ body{
 :root{
     --border-clr: #00ee99;
     --background-clr:
+
 }
 /*#category-content{
 
 }*/
-#stats{
-    border-radius: 10px;
-    border-width: 3px;
-    border-color:var(--border-clr);
+
+.shrine{
+    width:140px;
+    display:flex;
+    justify-self: flex-start;
+    font-family: "Georgia", serif;
+
+}
+#shrine-btn{
+    width:200px;
+    color:#f1e2b3;
+    border: none;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: "Georgia", serif;
+}
+#shrineimg{
+    display:flex;
+    justify-self: flex-end;
 }
 /*⬇️Button contents⬇️*/
-#stats-category-content{
+.stats-category-content{
     padding: 10px 20px;
     border-radius: 40px;
-    height:500px;
+    width: 450px;
+    height: 350px;
     background: #163c2f;
     cursor: pointer;
-    border: 1px solid white;
-    display: none  
-    animation: fadeIn 0.5s;
+    border: 1px solid white; 
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-row-gap: 10px; 
+    /*grid-template-columns: repeat(2, 138px);
+    /*grid-template-columns:148px 20px 10px minmax(148px,auto);
+    grid-template-rows: 190px 55px 100px;*/
+    /*animation fadeIn 0.5s;*/
 }
-#stats-content{
+/*#stats-content{
     border: solid 1px;
     border-radius: 40px;
     max-width: max-content;
-}
+}*/
 #stats-content2{
-    border: solid 1px;
-    max-width:max-content;
+    border: solid 1px white;
+    width:270px;
+    height:100px;
     border-radius: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 }
+
+.Wep-stats{
+    width:14px;
+    height:fit-content;
+    display:flex;
+    flex-direction:row;
+    justify-self:flex-end;
+    align-items: center;
+    padding:10px;
+    margin-right: 90%;
+    gap:5px
+}
+/*stats-input-forms⬇️*/
+#heavy-input{
+    border-radius: 100px;
+
+}
+#medium-input{
+    border-radius: 100px;
+}
+#light-input{
+    border-radius: 100px;
+}
+#str-input{
+    border-radius: 100px;
+    margin-left:26px;
+}
+#fort-input{
+    border-radius: 100px;
+    margin-left:22px;
+    margin-top: 10px;
+}
+#agi-input{
+    border-radius: 100px;
+    margin-left:42px;
+    margin-top: 10px;
+}
+#intel-input{
+    border-radius: 100px;
+    margin-left:5px;
+    margin-top: 10px;
+}
+#will-input{
+    border-radius: 100px;
+    margin-top: 10px;
+}
+#charm-input{
+    border-radius: 100px;
+    margin-top: 10px;
+}
+#song-input{
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-bottom:10px;
+}
+#prof-input{
+    border-radius: 100px;
+    margin-left: 16px;
+    margin-bottom:10px
+}
+#vital-input{
+    border-radius: 100px;
+    margin-left: 43px;
+    margin-bottom: 10px;
+}
+#erud-input{
+    border-radius: 100px;
+    margin-left: 26px;
+    margin-bottom: 10px;
+}
+/*stats-content-input-forms ⬆️*/
 #talents-content{
     padding: 10px 20px;
     border-radius: 40px;
@@ -208,41 +313,56 @@ body{
         opacity: 0;
     }
 }
-
-#talents{
+#stats-btn-c{
+    border-radius: 10px;
+    border-width: 3px;
+    border-color:var(--border-clr);
+    color:green;
+}
+#talents-btn-c{
     border-radius:10px;
     border-width: 3px;
     border-color:var(--border-clr);
 }
-#weapons{
+#weapons-btn-c{
     border-radius:10px;
     border-width: 3px;
     border-color:var(--border-clr);
 }
-#Equipment{
+#Equipment-btn-c{
     border-radius: 10px;
     border-width: 3px;
     border-color:var(--border-clr);
 }
-#Mantras{
+#Mantras-btn-c{
     border-radius: 10px;
     border-width: 3px;
     border-color:var(--border-clr);
+}
+#Overview-btn-c{
+    border-radius: 10px;
+    border-width: 3px;
+    border-color:var(--border-clr)
 }
 /*This is getting rid of borders*/
 
 #github{
-    border-radius: 100px;
-    flex-shrink: 100;
+    border-top-left-radius: 100px;
     border: none;
-    background-color:var(--border-clr)
+    background-color: transparent;
 }
 #instagram{
     border: none;
-    background-color:var(--border-clr);
+    background-color:transparent;
+    border-radius: 40px;
 }
 #youtube{
     border:none;
-    background-color:var(--border-clr);
+    background-color:transparent;
+    border-radius: 15px;
 }
 /*Border removal section ⬆️*/
+#over{
+    display:flex;
+    justify-self: center;
+}

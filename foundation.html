@@ -34,72 +34,97 @@
         </div>
         <!--The main components of the build validator-->
         <div class="category-buttons">
-            <button onclick="showCategory('stats')" id="stats">
+            <button onclick="showCategory('stats')" id="stats-btn-c">
                 Stats
                 <img src="images/level up or stats.svg" alt="Stats" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             </button>
-            <button onclick="showCategory('Talents')" id="talents">
+            <button onclick="showCategory('Talents')" id="talents-btn-c">
                 Talents
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-up2-icon lucide-book-up-2"><path d="M12 13V7"/><path d="M18 2h1a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2"/><path d="m9 10 3-3 3 3"/><path d="m9 5 3-3 3 3"/></svg>
             </button>
-            <button onclick="showCategory('Weapons')" id="weapons">
+            <button onclick="showCategory('Weapons')" id="weapons-btn-c">
                 Weapons
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sword-icon lucide-sword"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/></svg>
             </button>
-            <button onclick="showCategory('Equipment')"id="Equipment">
+            <button onclick="showCategory('Equipment')"id="Equipment-btn-c">
                 Gear
                 <img src="images/helmet.png" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             </button>
-            <button onclick="showCategory('Mantras')"id="Mantras">
+            <button onclick="showCategory('Mantras')"id="Mantras-btn-c">
                 Mantras
                 <img src="images/icons8-stars.svg" width="20" height="20">
+            </button>
+            <button onclick="showCategory('Overview')" id="Overview-btn-c" fill="none" >
+                Overview
+                <svg id="over" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/></svg>
             </button>
         </div>
         
         <!--Category Content Sections-->
         <div id="stats-content" class="stats-category-content">
+          <div id="core-stats" class="major-stats">
             <form><!--ill add the method="get" and action later during the backend-->
-                <label for="str-stat">Strength</label>
-                <input type="number" min="0" max="100" id="str-input" name="strong">
+
+                <label for="str-input">Strength</label>
+                <input type="number" min="0" max="100" id="str-input" name="strong" placeholder="0" style="width:37px;">
                 <br>
-                <label for="agil-stat">Agility</label>
-                <input type="number" min="0" max="100" id="agi-input" name="agile">
+                 <label for="fort-input">Fortitude</label>
+                <input type="number" min="0" max="100" id="fort-input" name="endurance" placeholder="0" style="width:37px;">
+                <br> 
+                <label for="agi-input">Agility</label>
+                <input type="number" min="0" max="100" id="agi-input" name="agile" placeholder="0" style="width:37px;">
                 <br>
-                <label for="intel">Intelligence</label>
-                <input type="number" min="0" max="100" id="intel-input" name="brain">
+                <label for="intel-input">Intelligence</label>
+                <input type="number" min="0" max="100" id="intel-input" name="brain" placeholder="0" style="width:37px;">
                 <br>
-                <label for="Will">Willpower</label>
-                <input type="number" min="0" max="100" id="will-input" name="mental">
+                <label for="will-input">Willpower</label>
+                <input type="number" min="0" max="100" id="will-input" name="mental" placeholder="0" style="width:37px;">
                 <br>
-                <label for="fort">Fortitude</label>
-                <input type="number" min="0" max="100" id="fort-input" name="endurance">
+                <label for="charm-input">Charisma</label>
+                <input type="number" min="0" max="100" id="charm-input" name="rizz" placeholder="0" style="width:37px;">
                 <br>
-                <label for="charm">Charisma</label>
-                <input type="number" min="0" max="100" id="charm-input" name="rizz">
-            </form>    
+            </form>
+         </div>
+                <div id="weapon-stats" class="Wep-stats">
+                    <label for="heavy-input">Heavy Wep.</label>
+                    <input type="number" min="0" max="100" id="heavy-input" name="heavy-weps" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="medium-input">Medium Wep.</label>
+                    <input type="number" min="0" max="100" id="medium-input" name="medium-weps" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="light-input">Light Wep.</label>
+                    <input type="number" min="0" max="100" id="light-input" name="light-weps" placeholder="0" style="width:37px;">
+                </div>
+            <br><br>
+            <div class="shrine">
+                <button onclick="ShrineOFOrder('SOR')" id="shrine-btn">
+                    Shrine Of Order
+                    <img src="images/shrineoforder.png" id="shrineimg" style="border-radius: 100%; " alt="Shrine of order image" width="25" >
+                </button>
+            </div>
                 <!--This is for none stats-->
-        </div>
-        <div id="stats-content2" class="stats-category-content">
+         <div id="stats-content2" class="stats-category-content">
             <form>
                 <br>
-                <label for="song">Songchant</label>
-                <input type="number" min="0" max="6" id="song-input" name="songchant">
+                <label for="song-input">Songchant</label>
+                <input type="number" min="0" max="6" id="song-input" name="songchant" placeholder="0" style="width:37px;">
                 <br>
-                <label for="prof">Proficiency</label>
-                <input type="number" min="0" max="6" id="prof-input" name="proficient">
+                <label for="prof-input">Proficiency</label>
+                <input type="number" min="0" max="6" id="prof-input" name="proficient" placeholder="0" style="width:37px;">
                 <br>
-                <label for="Vital">Vitality</label>
-                <input type="number" min="0" max="6" id="vital-input" name="health">
+                <label for="vital-input">Vitality</label>
+                <input type="number" min="0" max="6" id="vital-input" name="health" placeholder="0" style="width:37px;">
                 <br>
-                <label for="erud">Erudition</label>
-                <input type="number" min="0" max="6" id="erud-input" name="Vent">
+                <label for="erud-input">Erudition</label>
+                <input type="number" min="0" max="6" id="erud-input" name="Vent" placeholder="0" style="width:37px;">
+                <br>
             </form>
             <!--stats content goes here-->
         </div>
-
         <div id="Talents-content" class="category-content">
             <!--Talents content goes here-->
         </div>
+
 
         <div id="Weapons-content" class="category-content">
             <!--weapons content goes here-->
