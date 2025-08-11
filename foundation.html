@@ -21,8 +21,9 @@
             <br>
         <h2 id="header2">Is your Deepwoken Build Still Valid?</h2>
         <hr id=divider1>
-        <br>
+        <b>
         <p id="words">Insert your stats <br>  And it'll do the rest for you!</p>
+        </b>
         <!--<hr> adds a nice looking line in html for me-->
         <hr id="divider2">
 
@@ -62,69 +63,72 @@
         
         <!--Category Content Sections-->
         <div id="stats-content" class="stats-category-content">
-          <div id="core-stats" class="major-stats">
-            <form><!--ill add the method="get" and action later during the backend-->
+            
+            <div id="core-stats" class="major-stats">
 
-                <label for="str-input">Strength</label>
-                <input type="number" min="0" max="100" id="str-input" name="strong" placeholder="0" style="width:37px;">
-                <br>
-                 <label for="fort-input">Fortitude</label>
-                <input type="number" min="0" max="100" id="fort-input" name="endurance" placeholder="0" style="width:37px;">
-                <br> 
-                <label for="agi-input">Agility</label>
-                <input type="number" min="0" max="100" id="agi-input" name="agile" placeholder="0" style="width:37px;">
-                <br>
-                <label for="intel-input">Intelligence</label>
-                <input type="number" min="0" max="100" id="intel-input" name="brain" placeholder="0" style="width:37px;">
-                <br>
-                <label for="will-input">Willpower</label>
-                <input type="number" min="0" max="100" id="will-input" name="mental" placeholder="0" style="width:37px;">
-                <br>
-                <label for="charm-input">Charisma</label>
-                <input type="number" min="0" max="100" id="charm-input" name="rizz" placeholder="0" style="width:37px;">
-                <br>
-            </form>
-         </div>
-                <div id="weapon-stats" class="Wep-stats">
+                <form><!--ill add the method="get" and action later during the backend-->
+                    <label for="str-input">Strength</label>
+                    <input type="number" min="0" max="100" id="str-input" name="strong" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="fort-input">Fortitude</label>
+                    <input type="number" min="0" max="100" id="fort-input" name="endurance" placeholder="0" style="width:37px;">
+                    <br> 
+                    <label for="agi-input">Agility</label>
+                    <input type="number" min="0" max="100" id="agi-input" name="agile" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="intel-input">Intelligence</label>
+                    <input type="number" min="0" max="100" id="intel-input" name="brain" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="will-input">Willpower</label>
+                    <input type="number" min="0" max="100" id="will-input" name="mental" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="charm-input">Charisma</label>
+                    <input type="number" min="0" max="100" id="charm-input" name="rizz" placeholder="0" style="width:37px;">
+                    <br>
+                </form>
+            </div>
+            <div id="weapon-stats" class="Wep-stats">
+                <div class="maybe-weps">
                     <label for="heavy-input">Heavy Wep.</label>
                     <input type="number" min="0" max="100" id="heavy-input" name="heavy-weps" placeholder="0" style="width:37px;">
                     <br>
                     <label for="medium-input">Medium Wep.</label>
-                    <input type="number" min="0" max="100" id="medium-input" name="medium-weps" placeholder="0" style="width:37px;">
+                    <input type="number" min="0" max="100" id="medium-input" name="medium-weps"  placeholder="0" style="width:37px;">
                     <br>
                     <label for="light-input">Light Wep.</label>
                     <input type="number" min="0" max="100" id="light-input" name="light-weps" placeholder="0" style="width:37px;">
                 </div>
-            <br><br>
+            </div>
             <div class="shrine">
                 <button onclick="ShrineOFOrder('SOR')" id="shrine-btn">
                     Shrine Of Order
                     <img src="images/shrineoforder.png" id="shrineimg" style="border-radius: 100%; " alt="Shrine of order image" width="25" >
                 </button>
             </div>
+
                 <!--This is for none stats-->
-         <div id="stats-content2" class="stats-category-content">
-            <form>
-                <br>
-                <label for="song-input">Songchant</label>
-                <input type="number" min="0" max="6" id="song-input" name="songchant" placeholder="0" style="width:37px;">
-                <br>
-                <label for="prof-input">Proficiency</label>
-                <input type="number" min="0" max="6" id="prof-input" name="proficient" placeholder="0" style="width:37px;">
-                <br>
-                <label for="vital-input">Vitality</label>
-                <input type="number" min="0" max="6" id="vital-input" name="health" placeholder="0" style="width:37px;">
-                <br>
-                <label for="erud-input">Erudition</label>
-                <input type="number" min="0" max="6" id="erud-input" name="Vent" placeholder="0" style="width:37px;">
-                <br>
-            </form>
-            <!--stats content goes here-->
+            <div id="stats-content2" class="extra-stats-content2">
+                <form>
+                    <br>
+                    <label for="song-input">Songchant</label>
+                    <input type="number" min="0" max="6" id="song-input" name="songchant" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="prof-input">Proficiency</label>
+                    <input type="number" min="0" max="6" id="prof-input" name="proficient" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="vital-input">Vitality</label>
+                    <input type="number" min="0" max="6" id="vital-input" name="health" placeholder="0" style="width:37px;">
+                    <br>
+                    <label for="erud-input">Erudition</label>
+                    <input type="number" min="0" max="6" id="erud-input" name="Vent" placeholder="0" style="width:37px;">
+                    <br>
+                </form>
+            </div>
         </div>
+
         <div id="Talents-content" class="category-content">
             <!--Talents content goes here-->
         </div>
-
 
         <div id="Weapons-content" class="category-content">
             <!--weapons content goes here-->

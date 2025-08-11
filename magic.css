@@ -113,16 +113,19 @@ body{
 
 
 .social-icons{
+    border:solid 1px white;
+    max-width: fit-content;
     display: flex;
-    margin-top: 90%;
-    margin-right: 20%;
-    gap: 5px;
+    margin-top:90px;
+    gap: 2px;
     border-radius: 10px;
 }
 /*This is for category buttons reforming*/
 :root{
     --border-clr: #00ee99;
-    --background-clr:
+    --background-clr:#0e2a2a;
+    --text-clr: #f1e2b3;
+    --text-clr2: white;
 
 }
 /*#category-content{
@@ -130,11 +133,15 @@ body{
 }*/
 
 .shrine{
-    width:140px;
+    width:fit-content;
+    height: fit-content;
     display:flex;
     justify-self: flex-start;
-    font-family: "Georgia", serif;
-
+    border: solid 2px white;
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end:4;
 }
 #shrine-btn{
     width:200px;
@@ -159,99 +166,145 @@ body{
     height: 350px;
     background: #163c2f;
     cursor: pointer;
-    border: 1px solid white; 
+    border: 1px solid white;
     display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-row-gap: 10px; 
+    grid-template-columns: 25vh 30vh; 
     /*grid-template-columns: repeat(2, 138px);
     /*grid-template-columns:148px 20px 10px minmax(148px,auto);
     grid-template-rows: 190px 55px 100px;*/
     /*animation fadeIn 0.5s;*/
 }
-/*#stats-content{
-    border: solid 1px;
-    border-radius: 40px;
-    max-width: max-content;
-}*/
+#core-stats{
+    border:solid 1px;
+    max-width: fit-content;
+    max-height: fit-content;
+}
 #stats-content2{
-    border: solid 1px white;
-    width:270px;
-    height:100px;
-    border-radius: 40px;
+    border: solid 0.5px #ffffff;
+    background-color: #0e2a2a;
+    width:145px;
+    height:150px;
+    border-radius: 20px;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-column-end: 1;
+    margin-left:36vh; 
 }
 
 .Wep-stats{
-    width:14px;
+    border: solid .1em white;
     height:fit-content;
     display:flex;
-    flex-direction:row;
-    justify-self:flex-end;
-    align-items: center;
+    flex-direction: column;
     padding:10px;
-    margin-right: 90%;
-    gap:5px
+    /*margin-right: 20%;*/
+}
+.maybe-weps{
+    border: solid .1em rgb(0, 0, 0);
+    display:grid;
+    width: fit-content;
+    grid-template-columns: 1vh 1fr 14vh;
+    justify-items: ;
+    grid-row-gap: 1rem;
 }
 /*stats-input-forms⬇️*/
 #heavy-input{
-    border-radius: 100px;
+    border-radius: .4em;
+    padding: .1em;
+    margin-left: 7.5em;
+    height: 20px;
+    background-color:var(--background-clr);
+    color:(var(--text-clr2))
 
 }
 #medium-input{
-    border-radius: 100px;
+    border-radius: 4px;
+    margin-left: 7.5em;
+    height: 20px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #light-input{
-    border-radius: 100px;
+    border-radius: 4px;
+    margin-left: 7.5em;
+    height: 20px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #str-input{
     border-radius: 100px;
     margin-left:26px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #fort-input{
     border-radius: 100px;
     margin-left:22px;
     margin-top: 10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #agi-input{
     border-radius: 100px;
     margin-left:42px;
     margin-top: 10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #intel-input{
     border-radius: 100px;
     margin-left:5px;
     margin-top: 10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #will-input{
     border-radius: 100px;
     margin-top: 10px;
+    margin-left: 15px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #charm-input{
     border-radius: 100px;
     margin-top: 10px;
+    margin-left: 20px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #song-input{
     border-radius: 100px;
     margin-left: 20px;
     margin-bottom:10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #prof-input{
     border-radius: 100px;
     margin-left: 16px;
-    margin-bottom:10px
+    margin-bottom:10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #vital-input{
     border-radius: 100px;
     margin-left: 43px;
     margin-bottom: 10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 #erud-input{
     border-radius: 100px;
     margin-left: 26px;
     margin-bottom: 10px;
+    background-color:var(--background-clr);
+    color:var(--text-clr2);
 }
 /*stats-content-input-forms ⬆️*/
 #talents-content{
