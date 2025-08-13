@@ -177,7 +177,6 @@ body{
     border: 1px solid white;
     display:grid;
     grid-template-columns: 25vh 30vh; 
-    grid
     /*grid-template-columns: repeat(2, 138px);
     /*grid-template-columns:148px 20px 10px minmax(148px,auto);
     grid-template-rows: 190px 55px 100px;*/
