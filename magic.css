@@ -26,6 +26,7 @@ body{
     flex-shrink: 0;
     max-width: 500px;
     width: 100%;
+    max-height: 900vh;
     padding: 40px;
 }
 #divider1{
@@ -168,7 +169,7 @@ body{
 }
 /*⬇️Button contents⬇️*/
 .stats-category-content{
-    padding: 10px 20px;
+    padding: 20px 35px;
     border-radius: .9rem;
     width: 430px;
     height: 300px;
@@ -181,6 +182,7 @@ body{
     /*grid-template-columns:148px 20px 10px minmax(148px,auto);
     grid-template-rows: 190px 55px 100px;*/
     /*animation fadeIn 0.5s;*/
+    display: none;
 }
 #core-stats{
     border: none;
@@ -206,6 +208,15 @@ body{
     grid-column-end: 3;
     margin-left: 3rem;
     /*margin-left:36vh;*/ 
+}
+#Talents-content{
+    border: solid white 1px;
+    padding: 1rem;
+    align-self: center; /* this aligns the box itself to center*/
+    width: 30rem;
+    height: 10rem;
+    
+
 }
 
 .Wep-stats{

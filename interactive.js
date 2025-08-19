@@ -93,19 +93,19 @@ let z = "pizza"*/
 
 // const = a variable that cant be changed
 
-const PI = 3.141592;
+//const PI = 3.141592;
 // once you make a const you cant add another with the same name!
 
 //radius = window.prompt("Enter the radius of a circle");
 //radius = Number(radius); //to turn the user input into a number
 
 //let circ = 2 * pi * radius;
-const totalstats = 330
+/*const totalstats = 330
 let corestatsover1 = document.getElementById("")
 const shrineoforder = totalstats / 
+*/
 
-
-document.getElementById("mysubmit").addEventListener("click" ,function(){
+/*document.getElementById("mysubmit").addEventListener("click" ,function(){
     let radiusInput = document.getElementById("myText").value;
     let radius = Number(radiusInput);
     if (isNaN(radius)){
@@ -114,13 +114,46 @@ document.getElementById("mysubmit").addEventListener("click" ,function(){
         let circ = 2* PI *radius;
         document.getElementById("myh3").textContent = circ.toFixed(2) + "cm";
     }}
-);
-// this is good too ⬇️⬇️
+)*/
+//buttons to show categories
+const statbutton = document.getElementById("stats-btn-c");
+const talentbutton = document.getElementById("talents-btn-c");
+const weaponsbutton = document.getElementById("weapons-btn-c");
+const gearbutton = document.getElementById("Equipment-btn-c");
+const mantrabutton = document.getElementById("Mantras-btn-c");
+const overviewbutton = document.getElementById("Overview-btn-c");
+//content displayed by the buttons above
+const statsdisplay = document.getElementById("stats-content");
+/*const talentdisplay = document.getElementById("");
+const  = document.getElementById("");
+const  = document.getElementById("");
+const talentdisplay = document.getElementById("");
+const talentdisplay = document.getElementById("");*/
+
+statbutton.addEventListener("click", function(){
+    if(statsdisplay.style.display === "none"){
+        statsdisplay.style.display = "grid";
+    }
+    else{
+        statsdisplay.style.display = "none";
+    }
+
+})
+
+
+
+
+
+
+
+// this is good too ⬇️⬇️ ex of how i should display the stats
 document.getElementById("str-input").addEventListener("input",function(){
     let strstat = document.getElementById("str-input").value;
     let str = Number(strstat);
+    //change the location of where the textcontent of str shows up later
     document.getElementById("myh3").textContent = "strength:" + str;
-    console.log(str);
+    //console.log(str);
 })
 
+let hidden;
 
