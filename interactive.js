@@ -122,23 +122,87 @@ const weaponsbutton = document.getElementById("weapons-btn-c");
 const gearbutton = document.getElementById("Equipment-btn-c");
 const mantrabutton = document.getElementById("Mantras-btn-c");
 const overviewbutton = document.getElementById("Overview-btn-c");
+
+const buttonsCategory = document.querySelectorAll(".main-buttons");
 //content displayed by the buttons above
 const statsdisplay = document.getElementById("stats-content");
-/*const talentdisplay = document.getElementById("");
-const  = document.getElementById("");
-const  = document.getElementById("");
-const talentdisplay = document.getElementById("");
-const talentdisplay = document.getElementById("");*/
+/*const talentdisplay = document.getElementById(""); EXAMPLES
+const  = document.getElementById(""); EXAMPLES
+const  = document.getElementById(""); EXAMPLES
+const talentdisplay = document.getElementById(""); EXAMPLES
+const talentdisplay = document.getElementById("");EXAMPLES*/
+const talentdisplay = document.getElementById("Talents-content");
 
-statbutton.addEventListener("click", function(){
-    if(statsdisplay.style.display === "none"){
-        statsdisplay.style.display = "grid";
+function hidden(buttonsCategory){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+buttonsCategory.forEach(buttonss => {
+
+    buttonss.addEventListener("click", () => {
+
+        if(buttonss.id === statbutton){
+
+            if(statsdisplay.style.display === "none"){
+                statsdisplay.style.display = "grid";
+                }
+                } else {
+                    statsdisplay.style.display = "none";
+                }
+        if(buttonss === talentbutton){
+            
+            if(talentdisplay.style.display === "none"){
+                talentdisplay.style.display = "grid";
+            }
+            } else {
+                talentdisplay.style.display = "none";
+            }
+    });
+});
+/*
+buttonsCategory.forEach(buttonss => {
+    buttonss.addEventListener("click", () => {
+        if(statbutton){
+            statsdisplay.style.display = statsdisplay.style.display === "none" ? "grid" : "none";
+        }
+    });
+});
+buttonsCategory.forEach(buttonss => {
+    buttonss.addEventListener("click", () => {
+        if(talentbutton){
+            talentdisplay.style.display = talentdisplay === "none" ? "grid" : "none";
+        }
+    });
+}); */
+
+/*
+talentbutton.addEventListener('click', function(){
+    if(talentdisplay.style.display === "none"){
+        talentdisplay.style.display = "block"
     }
     else{
-        statsdisplay.style.display = "none";
+        talentdisplay.style.display = "none";
     }
+})*/
 
-})
+
+
 
 
 
@@ -153,7 +217,16 @@ document.getElementById("str-input").addEventListener("input",function(){
     //change the location of where the textcontent of str shows up later
     document.getElementById("myh3").textContent = "strength:" + str;
     //console.log(str);
-})
+});
 
 let hidden;
+/*
+function findit(name, numberofage){
+    console.log("found it!");
+    console.log(`found it! ${name}`);
+    console.log("found it!");
+    console.log(`found it AGAIN!${numberofage}`);
+}
+
+findit("Tutu", 25); */
 
