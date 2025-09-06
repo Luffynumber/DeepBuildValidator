@@ -122,8 +122,11 @@ const weaponsbutton = document.getElementById("weapons-btn-c");
 const gearbutton = document.getElementById("Equipment-btn-c");
 const mantrabutton = document.getElementById("Mantras-btn-c");
 const overviewbutton = document.getElementById("Overview-btn-c");
+//all of the content displays in one display variable
+const btnCategoryDisplay = document.getElementsByClassName(".category-content")
 
-const buttonsCategory = document.querySelectorAll(".main-buttons");
+
+const buttonsCategory = document.querySelectorAll(".main-buttons button");
 //content displayed by the buttons above
 const statsdisplay = document.getElementById("stats-content");
 /*const talentdisplay = document.getElementById(""); EXAMPLES
@@ -133,46 +136,31 @@ const talentdisplay = document.getElementById(""); EXAMPLES
 const talentdisplay = document.getElementById("");EXAMPLES*/
 const talentdisplay = document.getElementById("Talents-content");
 
-function hidden(buttonsCategory){
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// this is good too ⬇️⬇️ ex of how i should display the stats
+document.getElementById("str-input").addEventListener("input",function(){
+    let strstat = document.getElementById("str-input").value;
+    let str = Number(strstat);
+    //change the location of where the textcontent of str shows up later
+    document.getElementById("myh3").textContent = "strength:" + str;
+    //console.log(str);
+});
 
 
 
 buttonsCategory.forEach(buttonss => {
-
     buttonss.addEventListener("click", () => {
-
-        if(buttonss.id === statbutton){
-
+        if(buttonss === statbutton){
             if(statsdisplay.style.display === "none"){
-                statsdisplay.style.display = "grid";
-                }
-                } else {
-                    statsdisplay.style.display = "none";
-                }
+                statsdisplay.style.display = statsdisplay.style.display = "grid";
+            }else{
+                statsdisplay.style.display = statsdisplay.style.display = "none";
+            }
+        }
         if(buttonss === talentbutton){
-            
-            if(talentdisplay.style.display === "none"){
-                talentdisplay.style.display = "grid";
-            }
-            } else {
-                talentdisplay.style.display = "none";
-            }
+            if(talentdisplay.style.display === "none"){}
+
+        }
     });
 });
 /*
@@ -203,30 +191,25 @@ talentbutton.addEventListener('click', function(){
 
 
 
+//let hidden;
 
-
-
-
-
-
-
-// this is good too ⬇️⬇️ ex of how i should display the stats
-document.getElementById("str-input").addEventListener("input",function(){
-    let strstat = document.getElementById("str-input").value;
-    let str = Number(strstat);
-    //change the location of where the textcontent of str shows up later
-    document.getElementById("myh3").textContent = "strength:" + str;
-    //console.log(str);
-});
-
-let hidden;
-/*
-function findit(name, numberofage){
+/* function findit(name, numberofage){
     console.log("found it!");
     console.log(`found it! ${name}`);
     console.log("found it!");
     console.log(`found it AGAIN!${numberofage}`);
 }
 
-findit("Tutu", 25); */
+findit("Tutu", 25); 
 
+for(let i=1; i <= 10; i++){ //i++, means to increment by 1 each time
+    if(i === 7){
+        break; //skips the iteration when its the same as 7
+    }
+    else{
+        console.log(`Number of wipes: ${i}`);
+    }
+    
+}
+
+console.log("DANG YOU SUCK!")*/
