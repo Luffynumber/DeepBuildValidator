@@ -123,7 +123,7 @@ const gearbutton = document.getElementById("Equipment-btn-c");
 const mantrabutton = document.getElementById("Mantras-btn-c");
 const overviewbutton = document.getElementById("Overview-btn-c");
 //all of the content displays in one display variable
-const btnCategoryDisplay = document.getElementsByClassName(".category-content")
+const btnCategoryDisplay = document.getElementsByClassName(".category-content");
 
 
 const buttonsCategory = document.querySelectorAll(".main-buttons button");
@@ -132,9 +132,29 @@ const statsdisplay = document.getElementById("stats-content");
 /*const talentdisplay = document.getElementById(""); EXAMPLES
 const  = document.getElementById(""); EXAMPLES
 const  = document.getElementById(""); EXAMPLES
-const talentdisplay = document.getElementById(""); EXAMPLES
-const talentdisplay = document.getElementById("");EXAMPLES*/
+const talentdisplay = document.getElementById(""); EXAMPLES*/
+const weaponsdisplay = document.getElementById("Weapons-content");
 const talentdisplay = document.getElementById("Talents-content");
+const equipmentdisplay = document.getElementById("Equipment-content");
+const mantradisplay = document.getElementById("Mantras-content");
+const overviewdisplay = document.getElementById("Overview-content");
+
+const Displayes = [statsdisplay, talentdisplay, weaponsdisplay, equipmentdisplay,  mantradisplay, overviewdisplay];
+const AllButtons = [statbutton, talentbutton, weaponsbutton, gearbutton,  mantrabutton, overviewbutton];
+
+const buttonsAnddisplays = {statbutton:statsdisplay, talentbutton:talentdisplay, gearbutton:equipmentdisplay, mantrabutton:mantradisplay, weaponsbutton:weaponsdisplay, overviewbutton:overviewdisplay};
+
+//const indexdisplayes = Displayes.map(show, index);
+//const indexbuttons = AllButtons.map(btns, index);
+/*Displayes.forEach((content, index) =>{
+    console.log(`${index}:${content}`);
+});
+console.log(`1`);
+console.log("indexbuttons");*/
+//console.log(`${Displayes}`)
+const contexty = Displayes.map((item, index)=>{
+    return `${index}: ${item}`;
+});
 
 
 // this is good too ⬇️⬇️ ex of how i should display the stats
@@ -145,24 +165,71 @@ document.getElementById("str-input").addEventListener("input",function(){
     document.getElementById("myh3").textContent = "strength:" + str;
     //console.log(str);
 });
+                                            // Great example of using a array/list ina for loop //
+/*buttonsCategory.for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}*/
 
 
 
+AllButtons.forEach((buttonss, index) => {
+    buttonss.addEventListener("click", () => {
+        Displayes.forEach(content => {
+            content.style.display = "none";
+            Displayes[index].style.display = "grid";
+        });
+        //content.style.display = "none";
+        
+
+        
+    });
+});
+
+
+console.log(Displayes[5])
+
+
+
+/*
 buttonsCategory.forEach(buttonss => {
     buttonss.addEventListener("click", () => {
         if(buttonss === statbutton){
-            if(statsdisplay.style.display === "none"){
+            if(statsdisplay.style.display === "none" || talentdisplay.style.display === "none"){
                 statsdisplay.style.display = statsdisplay.style.display = "grid";
-            }else{
+            }
+            else if(talentdisplay){
+
+            }
+            else{
                 statsdisplay.style.display = statsdisplay.style.display = "none";
             }
         }
         if(buttonss === talentbutton){
-            if(talentdisplay.style.display === "none"){}
-
+            if(talentdisplay.style.display === "none"){
+                talentdisplay.style.display = talentdisplay.style.display = "grid";
+            }
+            else if(statsdisplay.style.display === "grid"){
+                statsdisplay.style.display = "none";
+            }
+            else{
+                talentdisplay.style.display = talentdisplay.style.display = "none";
+            }
+        }
+        if(buttonss === weaponsbutton){
+            if(weaponsdisplay.style.display === "none" || talentdisplay === "none"){
+                weaponsdisplay.style.display = weaponsdisplay.style.display = "grid";
+            }else{
+                weaponsdisplay.style.display = weaponsdisplay.style.display = "none";
+            }
         }
     });
-});
+}); */
+
+
+
+
+
 /*
 buttonsCategory.forEach(buttonss => {
     buttonss.addEventListener("click", () => {
